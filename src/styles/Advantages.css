@@ -1,0 +1,96 @@
+/* ── Section ────────────────────────────────────────────────────────────── */
+
+.advantages {
+  padding: 100px 8%;
+  background: linear-gradient(180deg, #030f1c, #020817);
+}
+
+.advantages__container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* ── Colonne gauche ─────────────────────────────────────────────────────── */
+
+.advantages__left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.advantages__left .btn--primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 17px;
+  padding: 16px 32px;
+}
+
+.advantages__desc {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* ── Grille de cards ────────────────────────────────────────────────────── */
+
+.advantages__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.advantages__card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 24px;
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s;
+}
+
+.advantages__card:hover {
+  border-color: rgba(74, 222, 128, 0.25);
+  box-shadow: 0 10px 40px rgba(74, 222, 128, 0.08);
+}
+
+.advantages__card-icon {
+  font-size: 33px;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.advantages__card-title {
+  color: #fff;
+  font-weight: 800;
+  font-size: 15px;
+  margin: 0 0 8px;
+}
+
+.advantages__card-desc {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── Responsive ─────────────────────────────────────────────────────────── */
+
+@media (max-width: 900px) {
+  .advantages__container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .advantages__grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,187 @@
+/* ── Section ────────────────────────────────────────────────────────────── */
+
+.realisations {
+  padding: 100px 8%;
+  background: linear-gradient(180deg, #020817 0%, #030f1c 100%);
+}
+
+.realisations__container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ── Grid ───────────────────────────────────────────────────────────────── */
+
+.realisations__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 60px;
+}
+
+/* ── Card ───────────────────────────────────────────────────────────────── */
+
+.realisation-card {
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s;
+}
+
+.realisation-card:hover {
+  border-color: rgba(74, 222, 128, 0.25);
+  box-shadow: 0 20px 60px rgba(74, 222, 128, 0.08);
+}
+
+/* ── Slider ─────────────────────────────────────────────────────────────── */
+
+.realisation-slider {
+  position: relative;
+  aspect-ratio: 4/3;
+  cursor: col-resize;
+  -webkit-user-select: none;
+  user-select: none;
+  overflow: hidden;
+}
+
+.realisation-slider__after,
+.realisation-slider__before {
+  position: absolute;
+  inset: 0;
+}
+
+.realisation-slider__before {
+  transition: clip-path 0.05s linear;
+}
+
+/* Labels AVANT / APRÈS */
+
+.realisation-slider__label {
+  position: absolute;
+  bottom: 12px;
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.realisation-slider__label--before {
+  left: 12px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #ef4444;
+}
+
+.realisation-slider__label--after {
+  right: 12px;
+  background: rgba(74, 222, 128, 0.2);
+  color: #4ade80;
+  border: 1px solid rgba(74, 222, 128, 0.4);
+}
+
+/* Trait diviseur */
+
+.realisation-slider__divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #fff;
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Poignée */
+
+.realisation-slider__handle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  font-size: 14px;
+  font-weight: 900;
+  color: #000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Hint */
+
+.realisation-slider__hint {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 11px;
+  padding: 4px 12px;
+  border-radius: 100px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* ── Infos chantier ─────────────────────────────────────────────────────── */
+
+.realisation-card__infos {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.realisation-card__label {
+  display: inline-block;
+  background: rgba(74, 222, 128, 0.1);
+  border: 1px solid rgba(74, 222, 128, 0.25);
+  color: #4ade80;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 100px;
+  width: fit-content;
+}
+
+.realisation-card__desc {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.realisation-card__meta {
+  display: flex;
+  gap: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+}
+
+/* ── Responsive ─────────────────────────────────────────────────────────── */
+
+@media (max-width: 1024px) {
+  .realisations__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .realisations__grid {
+    grid-template-columns: 1fr;
+  }
+}
