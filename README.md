@@ -1,7 +1,6 @@
 # Cleanlab Façade 🏠
 
-Site vitrine réalisé pour **Cleanlab Façade**, micro-entreprise spécialisée dans le nettoyage de façades. Projet client développé en React, avec animations et navigation multi-pages.
-
+Site vitrine réalisé pour **Cleanlab Façade**, micro-entreprise spécialisée dans le nettoyage de façades. Projet client développé en React, avec animations et navigation.
 > ⚠️ Projet en cours de finalisation — intégration des photos à venir.
 >
 > Lien vers le site : https://cleanlabfacade.netlify.app/
