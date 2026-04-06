@@ -1,16 +1,71 @@
-# React + Vite
+# Cleanlab Façade 🏠
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Site vitrine réalisé pour **Cleanlab Façade**, micro-entreprise spécialisée dans le nettoyage de façades. Projet client développé en React, avec animations et navigation.
+> ⚠️ Projet en cours de finalisation — intégration des photos à venir.
+>
+> Lien vers le site : https://cleanlabfacade.netlify.app/
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Stack technique
 
-## React Compiler
+| Technologie | Rôle |
+|---|---|
+| [React 19](https://react.dev/) | Framework UI |
+| [Vite](https://vitejs.dev/) | Bundler & dev server |
+| [React Router v7](https://reactrouter.com/) | Navigation |
+| [Framer Motion](https://www.framer.com/motion/) | Animations |
+| [Lucide React](https://lucide.dev/) | Icônes |
+| [Netlify](https://netlify.com/) | Déploiement |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📦 Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+# Cloner le projet
+git clone https://github.com/ItsMaxou1/cleanlab-facade.git
+cd cleanlab-facade
+
+# Installer les dépendances
+npm install
+
+# Lancer en développement
+npm run dev
+```
+
+Le projet sera disponible sur `http://localhost:5173`.
+
+---
+
+## 🛠️ Scripts disponibles
+
+| Commande | Description |
+|---|---|
+| `npm run dev` | Lance le serveur de développement |
+| `npm run build` | Build de production |
+| `npm run preview` | Prévisualise le build |
+| `npm run lint` | Analyse du code avec ESLint |
+
+---
+
+## 📁 Structure du projet
+
+```
+cleanlab-facade/
+├── public/           # Assets statiques
+├── src/              # Code source
+│   ├── components/   # Composants React
+│   ├── pages/        # Pages de l'application
+│   └── main.jsx      # Point d'entrée
+├── index.html
+├── vite.config.js
+└── netlify.toml      # Config déploiement Netlify
+```
+
+---
+
+## 👨‍💻 Développeur
+
+Développé par **Maxime Gervilla** — [github.com/ItsMaxou1](https://github.com/ItsMaxou1)  
+Auto-entrepreneur · Développeur Full Stack · Normandie (76)
