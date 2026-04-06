@@ -15,6 +15,15 @@
 
 .stats__item {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.stats__icon {
+  font-size: 28px;
+  margin-bottom: 4px;
 }
 
 .stats__value {
@@ -28,7 +37,7 @@
 .stats__label {
   color: rgba(255, 255, 255, 0.5);
   font-size: 14px;
-  margin-top: 8px;
+  margin-top: 4px;
   letter-spacing: 1px;
   text-transform: uppercase;
 }

@@ -3,10 +3,10 @@ import useInView from "../hooks/useInView";
 import "../styles/Stats.css";
 
 const STATS = [
-  { value: 500, suffix: "+", label: "Chantiers réalisés" },
-  { value: 30, suffix: " min", label: "Résultat visible" },
-  { value: 10, suffix: " ans", label: "Protection max" },
-  { value: 100, suffix: "%", label: "Clients satisfaits" },
+  { value: 30, suffix: " min", label: "Délai de réponse", icon: "⚡" },
+  { value: 10, suffix: " ans", label: "Garantie jusqu'à", icon: "🛡️" },
+  { value: 100, suffix: "%", label: "Clients satisfaits", icon: "⭐" },
+  { value: 76, suffix: "", label: "Département", icon: "📍" },
 ];
 
 function AnimatedCounter({ target, suffix, duration = 2000, visible }) {
@@ -52,6 +52,7 @@ export default function Stats() {
               transition: `opacity 0.6s ${i * 0.1}s, transform 0.6s ${i * 0.1}s`,
             }}
           >
+            <div className="stats__icon">{s.icon}</div>
             <div className="stats__value">
               <AnimatedCounter
                 target={s.value}
